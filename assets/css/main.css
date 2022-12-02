@@ -2177,12 +2177,22 @@ input, select, textarea {
 		.wrapper.style2 {
 			padding-top: 0;
 		}
+#videoDiv {position: relative;}
+#video1 { margin: auto; display: block; filter: brightness(100%); filter: opacity(.2)}
+#video2 { margin: auto; display: block; filter: brightness(100%); filter: opacity(1.0)}
+#videoMessage { position: absolute; top: 0; left: 0;
+display: flex;
+flex-direction: column; 
+justify-content: center;
+align-items: center; 
+width: 100%;
+height: 100%;}
 
 /* Header */
 
 	#header {
 		position: relative;
-		background-image: url("../../images/header.jpg");
+		background-image: url("../../images/jwst.png");
 		background-size: cover;
 		background-position: center center;
 		background-attachment: fixed;
