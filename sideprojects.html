@@ -24,7 +24,7 @@
 					<!-- Inner -->
 						<div class="inner">
 							<header>
-								<h1><a href="#banner" id="logo" class="scrolly">Astrophysical Research<br>&nbsp<br>&nbsp<br></a></h1>
+								<h1><a href="#banner" id="logo" class="scrolly">Side Projects<br>&nbsp<br>&nbsp<br></a></h1>
 								
 							</header>
 						</div>
@@ -37,7 +37,7 @@
 									<a href="#">Research Experience</a>
 									<ul>
 										<li><a href="research.html">Astrophysical Research</a></li>
-										<li><a href="#">Side Projects</a></li>
+										<li><a href="sideprojects.html">Side Projects</a></li>
 										
 									</ul>
 								</li>
@@ -54,160 +54,94 @@
 
 					<div class="container">
 						<div class="row gtr-200">
+							<header><h2>Learning Physics with Graph Neural Networks</h2></header>
 							<div class="col-4 col-12-mobile" id="sidebar">
+
 								<hr class="first" />
 								<section>
-									<header>
-										<h3><a href="#exp3" class="scrolly">Research Experience</a></h3>
-									</header>
+									<a class="image fit"><img src="images/image15.gif" alt="" /></a>
+									<a class="image fit"><img src="images/image14.gif" alt="" /></a>
 									<p>
-										I conducted research in galaxy evolution, supernova renments, and star-forming region. I analyzed image data in multiwavelength from ALMA, ASKAP, HST, SDSS, XMM, etc. I also compare simulation with observation through radiative transfer and mock observation. 
+										
 									</p>
 									
-									<header>
-										<h3>Thumbnails</h3>
-									</header>
-									<div class="row gtr-50">
-										<div class="col-4">
-											<a href="#exp3" class="image fit scrolly"><img src="images/tng.jpeg" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4><a href="#exp3" class="scrolly">A New Stellar Mass Proxy for Subhalo Abundance Matching</a></h4>
-											
-										</div>
-										<div class="col-4">
-											<a href="#exp2" class="image fit scrolly"><img src="images/snr_th.png" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4><a href="#exp2" class="scrolly">The Shellless Supernova Remnant B0532-67.5 in the Large Magellanic Cloud</a></h4>
-											
-										</div>
-										<div class="col-4">
-											<a href="#exp1" class="image fit scrolly"><img src="images/sf_th.png" alt="" /></a>
-										</div>
-										<div class="col-8">
-											<h4><a href="#exp1" class="scrolly">ALMA Observations toward the S-shaped Outflow and the Envelope around NGC 1333 IRAS 4A2</a></h4>
-											
-										</div>
-									</div>
-									<footer>
-										<a href="https://ui.adsabs.harvard.edu/public-libraries/yipBOUdIRQCz1L_6S-i8OQ" class="button">Learn More</a>
-									</footer>
 								</section>
 							</div>
 
 							<div class="col-8 col-12-mobile imp-mobile" id="content">
 								<article id="exp3">
-									<header>
-										<h2><a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221109136C/abstract"><font size="+6.0">A New Stellar Mass Proxy for Subhalo Abundance Matching</font></a></h2>
-										<p>
-											<a href="https://ui.adsabs.harvard.edu/public-libraries/yipBOUdIRQCz1L_6S-i8OQ"><font size="+2.0" color="blue" >Chuang, Chen-Yu</font> </a>& <a href="https://ui.adsabs.harvard.edu/public-libraries/IMuAXqtPT2aXg68_UCXbsg"><font size="+2.0" color="blue">Lin, Yen-Ting</font></a>
-										</p>
-									</header>
-									<a href="https://ui.adsabs.harvard.edu/abs/2022arXiv221109136C/abstract" class="image featured"><img src="images/sham.png" alt="" /></a>
+									<header><h3>Abstract</h3></header>
 									<p>
-										<font size="-1.0" color="grey" >The error of the stellar mass prediction corresponding to stellar mass using the AM scheme of \(\phi\) and \(\psi_1\) for panels (a) to (c), \(M_{\rm DM,peak}\) and \(M_{\rm DM,90\%}\) for pnael (d), \(V_{\rm peak}\) and \(V_{\rm max, 90\%}\) for panel (e), and \(\phi\) and \(\psi_5\) for panel (f). The green, red, and blue contours represent the predictions of "all", "central" and "satellit" groups, respectively. There are two contour lines for each AM scheme, which denote the data point density of 0.05 and 0.5 (normalized to maxima of 1).</font>
+										Numerical methods have been successful in simulating physical quantities over time. For instance, given the governing equation, an N-body simulation evolves the position, velocity, and acceleration of each particle at given time steps. N-body simulations have reproduced many astrophysical phenomena, such as the non-linear structure formation in the universe. However, it often requires many trial-and-error for tuning the parameters in the governing equations for the simulation to reproduce astrophysical phenomena. Thus, it is important to ask whether we can learn the parameters of governing equations purely by the data we can observe. Following <a href="https://arxiv.org/abs/2006.11287">Cranmer et al. (2020)</a>, I tried to recover the governing physics of N-body simulations by looking at the trajectories of particles with the aid of Graph Neural Network (GNN). In this work, I achieved the goals below: (1) Reimplement <a href="https://arxiv.org/abs/2006.11287">Cranmer et al. (2020)</a> from scratch in Julia. (2) Found how noise affects GNN. 
 									</p>
-									<section>
-										<header>
-											<h3>Abstract</h3>
-										</header>
-										<p>
-											Subhalo abundance matching (SHAM) has played an important role in improving our understanding of how galaxies populate their host dark matter halos. In essence, the SHAM framework is to find a dark matter halo property that best correlates with an attribute of galaxies, such as stellar mass. The peak value of the maximum circular velocity (\(V_{max}\)) a halo/subhalo has ever attained throughout its lifetime,  \(V_{peak}\) , has been a popular choice for SHAM. A recent study by Tonnesen & Ostriker (2021) suggested that quantity  \(\phi\) , which combines the present-day  \(V_{max}\)  and the peak value of halo dark matter mass, performs better in predicting stellar mass than \(V_{peak}\) . Inspired by their approach, in this work, we find that further improvement can be achieved by a quantity  \(\psi_5\)  that combines the 90th percentile of  \(V_{max}\)  a halo/subhalo has ever achieved with the 60th percentile of the dark matter halo time variation rate. Tests based on the simulation IllustrisTNG300 show that our new SHAM scheme, with just three free parameters, can improve the stellar mass prediction and mass-dependent clustering by 15% and 16% from \(\phi\) , respectively, over the redshift range  \(z=0-2\).
-										</p>
-									</section>
+									<header><h3>Figures</h3></header>
+									<p>
+										True V.S. predicted trajectories of a 4-body system. The system is governed by a \((r − 1)^2\) potential (springs between all particles).
+									</p>
 								</article>
 							</div>
 
-							<div class="col-4 col-12-mobile" id="sidebar">
-							</div>
+							<!--<header><h2>Protein Structure Prediction with Graph Neural Network</h2></header>
 							<div class="col-8 col-12-mobile imp-mobile" id="content">
 								<article id="exp2">
-									<header>
-										<h2><a href="https://ui.adsabs.harvard.edu/abs/2022AJ....163...30L/abstract"><font size="+4.0">The Shellless Supernova Remnant B0532-67.5 in the Large Magellanic Cloud </font></a></h2>
-										<p>
-											<a href="https://ui.adsabs.harvard.edu/public-libraries/aXX9jDkrQn6H2Uz5S50a_Q"><font size="+2.0" color="blue" >Li, Chuan-Jui</font> </a>, 
-											<a href="https://ui.adsabs.harvard.edu/search/p_=0&q=orcid%3A0000-0003-3667-574X%20OR%20%3Dauthor%3A%22Chu%2C%20You%20Hua%22%20AND%20aff%3A%22Academia%20Sinica%22%20and%20collection%3Aastronomy&sort=date%20desc%2C%20bibcode%20desc"><font size="+2.0" color="blue" >Chu, You-Hua</font> </a>, 
-											<a href="https://ui.adsabs.harvard.edu/public-libraries/yipBOUdIRQCz1L_6S-i8OQ"><font size="+2.0" color="blue" >Chuang, Chen-Yu</font> </a>& 
-											<a href="https://ui.adsabs.harvard.edu/search/filter_author_facet_hier_fq_author=AND&filter_author_facet_hier_fq_author=author_facet_hier%3A%221%2FLi%2C%20G%2FLi%2C%20Guan-Hong%22&fq=%7B!type%3Daqp%20v%3D%24fq_author%7D&fq_author=(author_facet_hier%3A%221%2FLi%2C%20G%2FLi%2C%20Guan-Hong%22)&q=author%3A%22Li%2C%20Guan-Hong%22&sort=date%20desc%2C%20bibcode%20desc&p_=0"><font size="+2.0" color="blue">Li, Guan-Hong</font></a>
-										</p>
-									</header>
-									<a href="https://ui.adsabs.harvard.edu/abs/2022AJ....163...30L/abstract" class="image featured"><img src="images/snr.png" alt="" /></a>
 									<p>
-										<font size="-1.0" color="grey" >Multiwavelength images of SNR B0532-67.5. The origin of each image is marked in the upper right corner. The top row presents ASKAP 888 MHz continuum images, and the second row XMM-Newton X-ray images in the full energy band (0.1-15 keV). The bottom four images are CTIO 4m MOSAIC H$\alpha$, MCELS H\(\alpha\), [O III], and [N II] images. To facilitate inter-comparisons, the contours of the ASKAP 888 MHz  radio continuum image (left panel of the top row) are over-plotted  on the XMM non-smoothed X-ray image and the MCELS H\(\alpha\) image, and the contours of the XMM smoothed  X-ray image are over-plotted on the ASKAP 888 MHz image (right panel of the top row).</font>
+										Proteins are vital to all known living organisms as they perform many complex functions which involve in growth, reaction to stimuli, metabolism, energy transformation, and reproduction. The function of proteins were found to be majorly determined by its structure, while the structure of the protein was suspected to depend on the sequence of amino acids of the protein. Nonetheless, people have had been struggled to predict protein structures by its sequence for nearly 50 years until 2021, when <a href="https://www.nature.com/articles/s41586-021-03819-2">AlphaFold 2</a> accurately predicts the protein structure with an uncertainty lower than the experimental uncertainty. The novel approach in AlphaFold 2 can also be applied to other studies such as the prediction of transcription factor binding sites on DNA. Please see the materials <a href="https://docs.google.com/presentation/d/1vyrWaxpo7pzMgCluitd3ILK5uMNP6wIU/edit?usp=sharing&ouid=116661436774602701493&rtpof=true&sd=true">here</a> for more details.
 									</p>
-									<section>
-										<header>
-											<h3>Abstract</h3>
-										</header>
-										<p>
-											The SNR B0532-67.5 in the Large Magellanic Cloud (LMC) was first diagnosed  by its nonthermal radio emission and its SNR nature was confirmed by diffuse  X-ray emission; however, no optical SNR shell is detected. The OB association LH75, or NGC 2011, is projected within the boundary of this SNR.  We have analyzed the massive star population in and around SNR B0532-67.5: using optical photometric data to construct color-magnitude diagrams (CMDs),  using stellar evolutionary tracks to estimate stellar masses, and using  isochrones to assess the stellar ages. From these analyses, we find a 20-25 Myr population in LH75 and a younger population less than 10 Myr old to the southwest of LH75.  The center of SNR B0532-67.5 is located closer to the core of LH75 than the massive stars to its southwest. We conclude that the SN progenitor was probably a member of LH75 with an initial mass \(\sim\)15 \(M_\odot\). The SN exploded in an H I cavity excavated by the  energy feedback of LH75. The low density of the ambient medium prohibits the  formation of a visible nebular shell. Despite the low density in the ambient medium, physical properties of the hot gas within the SNR interior do not differ from SNRs with a visible shell  by more than a factor of 2-3. The large-scale H I map shows that  SNR B0532-67.5 is projected in a cavity that appears to be connected with the much larger cavity of the supergiant shell LMC-4.
-										</p>
-									</section>
 								</article>
 							</div>
-
 							<div class="col-4 col-12-mobile" id="sidebar">
-							</div>
+
+							</div>-->
+							
+
+							<header><h2>Inspect Autism Spectrum Disorder from DNA Sequence</h2></header>
 							<div class="col-8 col-12-mobile imp-mobile" id="content">
 								<article id="exp1">
-									<header>
-										<h2><a href="https://ui.adsabs.harvard.edu/abs/2021ApJ...916...82C/abstract"><font size="+4.0">ALMA Observations toward the S-shaped Outflow and the Envelope around NGC 1333 IRAS 4A2</font></a></h2>
-										<p>
-											<a href="https://ui.adsabs.harvard.edu/public-libraries/yipBOUdIRQCz1L_6S-i8OQ"><font size="+2.0" color="blue" >Chuang, Chen-Yu</font> </a>,
-
-										</p>
-									</header>
-									<video width="800" height="400" autoplay muted loop id="video2">
-									 	<source src="videos/iras.mp4" type="video/mp4" loop="true">
-									Your browser does not support the video tag.
-									</video>
+									<header><h3>Abstract</h3></header>
 									<p>
-										<font size="-1.0" color="grey" >Image cube of NGC1333 IRAS4A in SO (\(J_N=6_5-5_4\)) [red], CO (\(J=2-1\)) [blue], and CCH (\(N=3-2, J=7/2-5/2, F=4-3\)) [green]</font>
+										Autism Spectrum Disorder (ASD) is a developmental disability caused by differences in the brain. Thus, people usually attribute the cause of ASD to mutations of neuron-related gene expression. However, unlike other genetic disease, ASD is caused by simultaneous mutations in multiple genes, including the genes which regulate synapse function, chromatin regulation, transcriptional regulation, and so on. Therefore, determining the mutation causing ASD is a highly complex task. Fortunately, parents who carry ASD-causing mutations do not necessarily pass their mutation to their children. By comparing the DNA sequences of ASD-carrying and non ASD-carrying family members, we are able to diagnostic the combinations of mutations that cause ASD. Thanks to the DNA sequences obtained from the lab in Graduate Institute of Medical Genomics and Proteomics, my colleagues and I were able to identify the mutations that cause ASD. 
 									</p>
-									<section>
-										<header>
-											<h3>Abstract</h3>
-										</header>
-										<p>
-											We have analyzed the ALMA archival data of the SO (\(J_N=6_5-5_4\)  and \(J_N=7_6-6_5\)), CO (\(J=2-1\)), and CCH (\(N=3-2, J=7/2-5/2, F=4-3\)) lines from the class 0 protobinary system, NGC1333 IRAS 4A. The images of SO (\(J_N = 6_5-5_4\)) and CO (\(J=2-1\)) successfully separate two northern outflow lobes connected to each protostar, IRAS 4A1 and IRAS 4A2. The outflow from IRAS 4A2 shows an S-shaped morphology, consisting of a flattened envelope around IRAS 4A2 with two outflow lobes connected to both edges of the envelope. The flattened envelope surrounding IRAS 4A2 has an opposite velocity gradient to that of the circumbinary envelope. The observed features are reproduced by the magnetohydrodynamic simulation of the collapsing core whose magnetic field direction is misaligned to the rotational axis. Our simulation shows that the intensity of the outflow lobes is enhanced on one side, resulting in the formation of S-shaped morphology. The S-shaped outflow can also be explained by the precessing outflow launched from an unresolved binary with a separation larger than 12 au (0".04). Additionally, we discovered a previously unknown extremely high velocity component at \(\sim\)45-90 km/s near IRAS 4A2 with CO. CCH (\(J_{N,F}=7/2_{3,4}-5/2_{2,3}\)) emission shows two pairs of blobs attaching to the bottom of shell like feature, and the morphology is significantly different from those of SO and CO lines. Toward IRAS 4A2, the S-shaped outflow shown in SO is overlapped with the edges of CCH shells, while CCH shells have the velocity gradients opposite to the flattened structure around IRAS 4A2.
-										</p>
-									</section>
+									<header><h3>Figures</h3></header>
+									<p>
+										<font color="black"><b>Upper panel</b></font>: A simple family tree for demonstration purpose. The boxes and circles represents female and male, respectively. The black color denote the family members that have ASD symptoms while the white color denote those who do not have ASD symptoms. <br> <font color="black"><b>Lower panel</b></font>: Generated by Gene Ontology. Green circles represent the mutations that correspond to ASD. The mutations more liekely to be correlated with ASD are denoted with larger circles. The texts explain the original function of the mutated genes, and the links denote the relation between different genes. The mutations related to neurons are in the red box. 
+									</p>
 								</article>
 							</div>
-						</div>
-						<hr />
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Gravida aliquam penatibus</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
+							<div class="col-4 col-12-mobile" id="sidebar">
+								<hr class="first" />
+								<section>
+									<a class="image fit"><img src="images/asd1.png" alt="" /></a>
+									<a class="image fit"><img src="images/asd2.png" alt="" /></a>
+									
+								</section>
+							</div>
+
+							<header><h2>Magic Cube Solver&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</h2></header>
+							<div class="col-4 col-12-mobile" id="sidebar">
+
+								<hr class="first" />
+								<section>
+									<a class="image fit"><img src="images/rubic1.png" alt="" /></a>
+									<a class="image fit"><img src="images/rubic2.png" alt="" /></a>
+									<p>
+										
+									</p>
+									
+								</section>
+							</div>
+
+							<div class="col-8 col-12-mobile imp-mobile" id="content">
+								<article id="exp3">
+									<header><h3>Abstract</h3></header>
+									<p>
+										This is a magic cube solving robot prototype built by my collegues and I. We demonstrated the robot in the NTU Azalea Festival and attracting hundreds of attendees to visit the booth. I majorly designed a program to identify the colors of magic cube through web camera using python and JAVA, while I also helped design and 3D printed the hardware and control system. Please see the demonstration <a href="https://www.youtube.com/watch?v=7RalEq9f3NY">on YouTube</a>. 
+									</p>
+									<header><h3>Figures</h3></header>
+									<p>
+										<font color="black"><b>Upper panel</b></font>: The magic cube solving robot <br> <font color="black"><b>Lower panel</b></font>: The colors on each face of the magic cube identified by the web camera. 
+									</p>
+								</article>
+							</div>
 						</div>
 					</div>
 
@@ -216,9 +150,10 @@
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
-						<div class="row">
+						
+						<!-- <div class="row">
 
-							<!-- Tweets -->
+							
 								<section class="col-4 col-12-mobile">
 									<header>
 										<h2 class="icon brands fa-twitter circled"><span class="label">Tweets</span></h2>
@@ -251,7 +186,7 @@
 									</ul>
 								</section>
 
-							<!-- Posts -->
+							
 								<section class="col-4 col-12-mobile">
 									<header>
 										<h2 class="icon solid fa-file circled"><span class="label">Posts</span></h2>
@@ -292,7 +227,7 @@
 									</ul>
 								</section>
 
-							<!-- Photos -->
+							
 								<section class="col-4 col-12-mobile">
 									<header>
 										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
@@ -318,32 +253,29 @@
 										</div>
 									</div>
 								</section>
-
 						</div>
 						<hr />
+					-->
+						
 						<div class="row">
 							<div class="col-12">
 
 								<!-- Contact -->
 									<section class="contact">
 										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
+											<h3>Contact me?</h3>
 										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
+										<p>Email: cychuang@asiaa.sinica.edu.tw<br>Address: Institute of Astronomy Room R529, General Building II, NTHU, No. 101, Section 2, Kuang-Fu Road, Hsinchu 30013, Taiwan, R.O.C</p>
 										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
+											<li><a href="https://ui.adsabs.harvard.edu/public-libraries/yipBOUdIRQCz1L_6S-i8OQ" class="icon regular fa-book"><span class="label">ADS</span></a></li>
+											<li><a href="https://orcid.org/0000-0003-2069-9413" class="icon brands fa-orcid"><span class="label">ORCID</span></a></li>
 										</ul>
 									</section>
 
 								<!-- Copyright -->
 									<div class="copyright">
 										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+											<li>&copy; Chen-Yu Chuang (2022). All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 										</ul>
 									</div>
 
